@@ -1,0 +1,342 @@
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html {
+	/* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+	font-family:
+		system-ui,
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+	line-height: 1.15; /* 1. Correct the line height in all browsers. */
+	-webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+	tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+/*
+Sections
+========
+*/
+
+body {
+	margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+	font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+	border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+	padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+	display: list-item;
+}
+:root {
+  --color-background: #1e1e1e;
+  --color-text: #d4d4d4;
+  --color-primary: #267f99;
+  --color-primary-active: #098658;
+  --color-secondary: #dcdcaa;
+
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-block-size: 100dvh;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: inherit;
+
+  &:is(:hover, :focus-visible) {
+    color: var(--color-primary-active);
+    text-decoration: underline;
+  }
+}
+
+#app {
+  margin: 0 auto;
+  padding: 2rem;
+  inline-size: min(80ch, 100%);
+}
+
+  .masthead.svelte-1n46o8q {
+    display: flow-root;
+  }
+
+  .title.svelte-1n46o8q {
+    margin-block-start: 0;
+    font-size: 2.5rem;
+  }
+
+  main.svelte-1n46o8q {
+    counter-reset: section;
+  }
+
+  .alert-message.svelte-1n46o8q {
+    margin-block-end: 1rem;
+    color: var(--color-secondary);
+  }
+
+  .chapter.svelte-1n46o8q {
+    counter-increment: section;
+  }
+
+  .chapter-header.svelte-1n46o8q {
+    position: sticky;
+    inset-block-start: 1px; /* workaround for anchor links */
+    container-type: scroll-state;
+    container-name: chapter-header;
+  }
+
+  .chapter-title.svelte-1n46o8q {
+    display: flex;
+    margin-block: 0;
+    padding-block: 0.5rem;
+    padding-inline: 0.5rem;
+    gap: 1rem;
+    font-size: 1.25rem;
+    background: var(--color-primary);
+
+    /* :stuck */
+    @container chapter-header scroll-state(stuck: top) {
+      background: var(--color-primary-active);
+    }
+
+    &:after {
+      content: counter(section, upper-roman);
+      margin-inline-start: auto;
+      color: var(--color-background);
+    }
+  }
+
+  .chapter-content.svelte-1n46o8q {
+    margin-block-start: 1rem;
+    margin-block-end: 2rem;
+  }
+
+  .table-of-contents.svelte-1n46o8q {
+    display: none;
+    position: fixed;
+    inset-block-start: 1rem;
+    inset-inline-end: 1rem;
+    inline-size: 225px;
+
+    @media (width >= 1250px) {
+      display: block;
+    }
+  }
+
+  .navlist.svelte-1n46o8q {
+    margin: 0;
+    list-style-type: upper-roman;
+    scroll-target-group: auto;
+
+    :where(.svelte-1n46o8q)::marker {
+      font-size: 0.75rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .navlink.svelte-1n46o8q {
+    color: var(--color-text);
+
+    &:is(:where(.svelte-1n46o8q):hover, :where(.svelte-1n46o8q):focus-visible) {
+      color: var(--color-primary);
+    }
+
+    &:target-current {
+      color: var(--color-primary-active);
+    }
+  }
