@@ -1,11 +1,15 @@
 :root {
+  --color-background: #1e1e1e;
+  --color-text: #d4d4d4;
+  --color-primary: #267f99;
+  --color-primary-active: #098658;
+  --color-secondary: #dcdcaa;
+
+  color: var(--color-text);
+  background: var(--color-background);
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color: #d4d4d4;
-  background-color: #1e1e1e;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,22 +17,19 @@
   scroll-behavior: smooth;
 }
 
-a {
-  font-weight: 500;
-  color: #569cd6;
-  text-decoration: inherit;
-}
-a:is(:hover, :focus-visible) {
-  color: #569cd6;
-}
-
 body {
   min-block-size: 100dvh;
 }
 
-h1 {
-  font-size: 2.5em;
-  line-height: 1.1;
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: inherit;
+
+  &:is(:hover, :focus-visible) {
+    color: var(--color-primary-active);
+    text-decoration: underline;
+  }
 }
 
 #app {

@@ -59,6 +59,7 @@
 
   .title {
     margin-block-start: 0;
+    font-size: 2.5rem;
   }
 
   main {
@@ -67,7 +68,7 @@
 
   .alert-message {
     margin-block-end: 1rem;
-    color: #dcdcaa;
+    color: var(--color-secondary);
   }
 
   .chapter {
@@ -88,17 +89,17 @@
     padding-inline: 0.5rem;
     gap: 1rem;
     font-size: 1.25rem;
-    background: #267f99;
+    background: var(--color-primary);
 
     /* :stuck */
     @container chapter-header scroll-state(stuck: top) {
-      background: #098658;
+      background: var(--color-primary-active);
     }
 
     &:after {
       content: counter(section, upper-roman);
       margin-inline-start: auto;
-      color: #1e1e1e;
+      color: var(--color-background);
     }
   }
 
@@ -131,14 +132,14 @@
   }
 
   .navlink {
-    color: #fff;
+    color: var(--color-text);
 
     &:is(:hover, :focus-visible) {
-      text-decoration: underline;
-      color: #267f99;
+      color: var(--color-primary);
     }
+
     &:target-current {
-      color: #098658;
+      color: var(--color-primary-active);
     }
   }
 </style>
